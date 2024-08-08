@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1
+        {
+           margin-top: 2%;
+           margin-left: 40%;
+        }
+        #sepal_length,#sepal_width,#petal_length,#petal_width
+        {
+           padding:20px 75px;
+           text-align: center;
+        }
+        #sub
+        {
+            padding: 15px 20px;
+            margin-left: 12.5%;
+            background-color: white;
+            border: solid;
+            opacity: 0.5;
+        }
+        #Img{
+            height: 220px;
+            width: 150px;
+            margin-left: 8%;
+            margin-bottom: 10px;
+        }
+        #he
+        {
+            text-align: center;
+        }
+        #sub:hover
+        {
+           color: white;
+           background-color: green;
+           opacity: 1;
+           /* border: color(srgb rgb(168, 106, 106) rgb(46, 216, 46) blue); */
+           border-radius: 10%;
+           transition: 500ms linear;
+        }
+     #result1{
+        margin-left: 10.5%;
+        margin-top: 2%;
+        border: solid;
+        border-radius: 5%;
+        padding: 15px 20px;
+        box-shadow: 0 0 50px 15px #615fdf;
+        color:#615fdf ;
+     }
+     #result1:hover
+     {
+        color: white;
+        background-color: rgb(121, 34, 121);
+        transition: 500ms linear;
+     }
+    </style>
+</head>
+<body>
+    <h1 id = 'he' style="color: rgb(105, 45, 161);">Iris Classification</h1>
+    <div id = "div1">
+       
+    <form action="/for" method=post>
+        <!-- <label for="sepal_length">Selpal_length:</label> -->
+       <img src="./static/phot.jpg" alt="petals" id ="Img" loading="lazy">
+       <br>
+        <input type="text" id="sepal_length" name="sepal_length" placeholder="Sepal length">
+        <br>
+        <br>
+         <!-- <label for="sepal_width">sepal_width:</label> -->
+        <input type="text" id="sepal_width" name="sepal_width" placeholder="sepal_width">
+         <br>
+         <br>
+        <!-- <label for="petal_length">petal_length</label> -->
+        <input type="text" id="petal_length" name="petal_length" placeholder="petal_length">
+        <br>
+        <br>
+        <!-- <label for="petal_width">petal_width:</label> -->
+        <input type="text" id="petal_width" name="petal_width" placeholder="petal_width">
+        <br>
+        <br>
+        <input type="submit" value="submit" id="sub">
+    </form>
+    <br>
+    <br>
+    {% for res in result %}
+    <span id = "result1">{{ res }}</span>
+    {% endfor %}
+    </div>
+    <br>
+    <br>
+</body>
+</html>
